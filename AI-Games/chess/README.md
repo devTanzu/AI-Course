@@ -67,9 +67,9 @@ python chess_game.py
 ## 🖼️ Screenshots
 
 <p float="left">
-  <img src="screenshots/game_start.png" width="280" alt="Start of Game">
-  <img src="screenshots/piece_selected.png" width="280" alt="Piece Selected with Legal Moves">
-  <img src="screenshots/checkmate.png" width="280" alt="Checkmate Message">
+  <img src="game_start.png" width="280" alt="Start of Game">
+  <img src="piece_selected.png" width="280" alt="Piece Selected with Legal Moves">
+  <img src="checkmate.png" width="280" alt="Checkmate Message">
 </p>
 
 > 📸 You can capture your own screenshots using `PrtSc` or built-in tools and place them in a `/screenshots` folder for documentation.
