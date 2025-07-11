@@ -3,7 +3,7 @@
 This is a graphical chess game built with **Python**, **Pygame**, and **python-chess**, where you (the user) play as **White** against a simple AI (Black). The game is intuitive, interactive, and features highlights for selected pieces and legal moves.
 
 <p align="center">
-  <img src="screenshots/gameplay.png" width="500" alt="Chess Gameplay Screenshot">
+  <img src="chess-gameplay.png" width="500" alt="Chess Gameplay Screenshot">
 </p>
 
 ---
