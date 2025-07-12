@@ -21,11 +21,18 @@ LIGHT_SQUARE = (240, 217, 181)
 DARK_SQUARE = (181, 136, 99)
 HIGHLIGHT = (247, 247, 105, 150)
 LEGAL_MOVE = (124, 252, 0, 150)
+WHITE_PIECE = (255, 255, 255)
+BLACK_PIECE = (0, 0, 0)
 
 # Set up display
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption('Chess: User vs Computer')
 clock = pygame.time.Clock()
+
+# Piece symbols for display if image is missing
+PIECE_SYMBOLS = {
+    'p': '♟', 'r': '♜', 'n': '♞', 'b': '♝', 'q': '♛', 'k': '♚'
+}
 
 # Load piece images
 piece_images = {}
@@ -37,7 +44,7 @@ def load_pieces():
         for piece in pieces:
             key = color + piece
             try:
-                image = pygame.image.load(f'{key}.png')
+                image = pygame.image.load(f'pieces/{key}.png')
                 piece_images[key] = pygame.transform.smoothscale(image, (SQUARE_SIZE, SQUARE_SIZE))
             except:
                 print(f"Missing image: {key}.png")
@@ -53,8 +60,10 @@ class ChessGame:
         self.computer_thinking = False
         self.message = ""
         self.font = pygame.font.SysFont('Arial', 18)
+        self.piece_font = pygame.font.SysFont('Arial', int(SQUARE_SIZE * 0.8))
 
     def draw_board(self):
+        # Draw squares
         for row in range(8):
             for col in range(8):
                 color = LIGHT_SQUARE if (row + col) % 2 == 0 else DARK_SQUARE
@@ -62,7 +71,7 @@ class ChessGame:
                                                  MARGIN + row * SQUARE_SIZE,
                                                  SQUARE_SIZE, SQUARE_SIZE))
 
-        # Highlights
+        # Highlight selected and legal moves
         if self.selected_square is not None:
             row, col = 7 - self.selected_square // 8, self.selected_square % 8
             highlight_surface = pygame.Surface((SQUARE_SIZE, SQUARE_SIZE), pygame.SRCALPHA)
@@ -81,24 +90,34 @@ class ChessGame:
             piece = self.board.piece_at(square)
             if piece:
                 row, col = 7 - square // 8, square % 8
+                topleft = (MARGIN + col * SQUARE_SIZE, MARGIN + row * SQUARE_SIZE)
                 piece_key = ('w' if piece.color == chess.WHITE else 'b') + piece.symbol().lower()
                 image = piece_images.get(piece_key)
-                if image:
-                    screen.blit(image, (MARGIN + col * SQUARE_SIZE, MARGIN + row * SQUARE_SIZE))
 
-        # Messages
+                if image:
+                    screen.blit(image, topleft)
+                else:
+                    # Draw Unicode if image is missing
+                    symbol = PIECE_SYMBOLS[piece.symbol().lower()]
+                    color = WHITE_PIECE if piece.color == chess.WHITE else BLACK_PIECE
+                    text = self.piece_font.render(symbol, True, color)
+                    rect = text.get_rect(center=(topleft[0] + SQUARE_SIZE // 2,
+                                                 topleft[1] + SQUARE_SIZE // 2))
+                    screen.blit(text, rect)
+
+        # Show messages
         if self.message:
             text = self.font.render(self.message, True, BLACK)
             screen.blit(text, (20, HEIGHT - 30))
 
         turn_text = "White's turn" if self.board.turn == chess.WHITE else "Black's turn"
-        turn_color = WHITE if self.board.turn == chess.WHITE else BLACK
+        turn_color = BLACK if self.board.turn == chess.BLACK else WHITE
         text = self.font.render(turn_text, True, turn_color)
-        screen.blit(text, (WIDTH - 130, 20))
+        screen.blit(text, (WIDTH - 150, 20))
 
         if self.computer_thinking:
             thinking_text = self.font.render("Computer thinking...", True, BLACK)
-            screen.blit(thinking_text, (WIDTH - 170, HEIGHT - 30))
+            screen.blit(thinking_text, (WIDTH - 180, HEIGHT - 30))
 
     def handle_click(self, pos):
         if self.computer_thinking or self.board.turn == chess.BLACK:
@@ -188,9 +207,8 @@ def main():
         pygame.display.flip()
         clock.tick(FPS)
 
-        # Check if game is over
         if game.board.is_game_over():
-            pygame.time.delay(3000)  # Show the message for 3 seconds
+            pygame.time.delay(3000)
             running = False
 
     pygame.quit()
