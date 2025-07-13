@@ -74,14 +74,15 @@ Key properties:
 |-- tic_tac_toe.py
 |-- README.md
 |-- screenshots/
-    |-- gameplay1.png
+    |-- gameplay.png
     
 ```
 
 To add screenshots in your `README.md`:
 
 ```markdown
-![Gameplay 1](./screenshots/Gameplay.png)
+![Gameplay](./screenshots/Gameplay.png)
+
 
 ```
 
