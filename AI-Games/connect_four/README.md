@@ -45,30 +45,31 @@ The program will show the updated board after every move.
 
 A message will display if a player wins or if the board is full (draw).
 
-🖼️ Screenshots
+## 🖼️ Screenshots
 
-(Optional) Add terminal screenshots of:
+> 🧩 *Take a few screenshots while the game is running and save them in the `screenshots/` folder inside your project.*
 
-The starting board
+**Suggested file structure**
 
-A mid-game moment
-
-A winning moment or draw
-
-Place them in a /screenshots folder.
-
-📂 Folder Structure
-
-markdown
-Copy
-Edit
 connect_four/
 ├── A_connect_four.py
 ├── README.md
 └── screenshots/
-    ├── game_start.png
-    ├── mid_game.png
-    └── win_or_draw.png
+├── game_start.png
+├── mid_game.png
+└── win_or_draw.png
+
+scss
+Copy
+Edit
+
+**Embed the images in your README**
+
+```markdown
+![Game start](./Screenshots/after%20game%20over.png)
+![Mid‑game](./Screenshots/starting.png)
+![Win or draw](./Screenshots/wining.png)
+
 🚀 Features
 
 Interactive terminal-based interface
