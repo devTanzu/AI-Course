@@ -99,7 +99,7 @@ Copy
 Edit
 ![start_game](./screenshots/start_game.png)
 ![piece_selected](./screenshots/piece_selected.png)
-![Checkmate](./screenshots/checkmate_white.png)
+
 🚀 Key Features
 Interactive 8x8 chessboard using Pygame
 
