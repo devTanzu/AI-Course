@@ -1,117 +1,100 @@
-# ♟️ Chess: User vs Computer (Pygame Edition)
+♟️ Simple Chess in Python (Pygame + python‑chess)
+A lightweight, beginner‑friendly chess application where you control the White pieces against a modest AI (Black). Built purely with Python, Pygame, and python‑chess, it illustrates how GUI interaction and rule‑based logic can create an engaging board‑game experience.
 
-This is a graphical chess game built with **Python**, **Pygame**, and **python-chess**, where you (the user) play as **White** against a simple AI (Black). The game is intuitive, interactive, and features highlights for selected pieces and legal moves.
+🧠 How the AI Thinks
+The computer follows a straightforward decision tree:
 
-<p align="center">
-  <img src="./picture/chess.png" width="500" alt="Chess Gameplay Screenshot">
-</p>
+Safe captures first – it hunts for any capture that doesn’t immediately blunder material.
 
----
+Checks second – if no capture is possible, it seeks moves that put your king in check.
 
-## 🧠 Algorithm Behind the AI
+Fallback: any legal move – when neither capture nor check is available, the AI selects the first legal move it finds.
 
-The computer opponent uses a **basic rule-based algorithm**:
+This is intentionally simple—perfect for demonstrating turn logic without diving into heavyweight engines like Stockfish.
 
-* Prioritizes **capture moves** (especially safe captures).
-* Then looks for **checks**.
-* Falls back to **any legal move** if no capture or check is available.
-* This is not a full-fledged engine like Stockfish; it's meant for casual gameplay and understanding turn-based logic.
-
----
-
-## 🛠️ Requirements
-
-Before running the game, make sure you have the following libraries installed:
-
-```bash
+🛠️ What You’ll Need
+bash
+Copy
+Edit
 pip install pygame python-chess
-```
+Python 3.7 or newer
 
-You must also have **Python 3.7+** installed.
+Pygame ( graphics and input )
 
----
+python‑chess ( board representation & legality )
 
-## ▶️ How to Run the Game
+▶️ Getting Started
+Clone or download this repository.
 
-1. **Clone or Download this repository** to your local machine.
+Make sure the directory includes the piece images, named exactly:
 
-2. Make sure your working directory contains all chess piece image files:
+Copy
+Edit
+wp.png  bp.png
+wr.png  br.png
+wn.png  bn.png
+wb.png  bb.png
+wq.png  bq.png
+wk.png  bk.png
+Launch the game:
 
-   * `wp.png`, `bp.png`, `wr.png`, `br.png`, `wn.png`, `bn.png`, etc.
-   * These images must be named in lowercase: e.g., `wp.png` for White Pawn, `bk.png` for Black King.
-
-3. Run the game using:
-
-```bash
+bash
+Copy
+Edit
 python chess_game.py
-```
+🎮 Controls & Gameplay
+Left‑click a White piece to select it.
 
----
+Valid destinations glow green.
 
-## 🎮 How to Play
+The chosen piece glows yellow.
 
-* You play as **White**.
-* The computer will play as **Black**.
-* Use your **mouse** to click on a piece to select it.
+Click a highlighted square to move.
 
-  * Legal moves will be **highlighted** in green.
-  * The selected piece will be highlighted in **yellow**.
-* Click on a valid destination square to make your move.
-* The AI will automatically respond after a brief delay.
-* Press `R` to **restart** the game at any time.
+The AI replies automatically after a brief pause.
 
-> The game ends with a victory, checkmate, stalemate, or draw (75-move rule, insufficient material, etc.).
+Press R at any moment to restart.
 
----
+The game finishes on checkmate, stalemate, draw by repetition/75‑move rule, or insufficient material.
 
-## 📂 Folder Structure
-
-```
-chess_project/
+📁 Recommended Folder Layout
+markdown
+Copy
+Edit
+simple_chess/
 ├── chess_game.py
-├── wp.png
-├── bp.png
-├── wr.png
-├── br.png
-├── ...
+├── assets/
+│   ├── wp.png  …  bk.png
+│   └── board_background.png
 ├── README.md
 └── screenshots/
-    ├── game_start.png
-    ├── piece_selected.png
-    └── checkmate.png
-```
+    ├── opening_screen.png
+    ├── in_play.png
+    └── checkmate_white.png
+🚀 Current Feature Set
+Click‑driven 8×8 board rendered with Pygame
 
----
+Legal‑move highlights and move validation via python‑chess
 
-## 🚀 Features
+Automatic pawn promotion to Queen
 
-* Interactive 8x8 chessboard UI
-* Piece selection with legal move highlights
-* Pawn promotion (to Queen by default)
-* AI plays legal, sometimes challenging moves
-* Automatic game status messages (Check, Checkmate, Draw, etc.)
+Text banner showing Check / Checkmate / Stalemate
 
----
+Basic AI that plays “good enough” moves for casual practice
 
-## ❓ Future Improvements (Suggestions)
+🔮 Ideas for Expansion
+Side‑swap option (play as Black)
 
-* Add support for user playing as Black
-* Add sound effects
-* Improve AI with Minimax or Stockfish integration
-* Add move history or undo functionality
-* Enhance piece promotion UI
+Move history panel with PGN export
 
----
+Sound effects for moves and captures
 
-## 📜 License
+Undo / Redo functionality
 
-This project is open-source and free to use under the **MIT License**.
+Stronger AI via Minimax or external UCI engine
 
----
+Custom promotion dialog (choose Q/R/B/N)
 
-## 💡 Credits
+📜 License
+Released under the MIT License – experiment, change, or publish your modified versions freely.
 
-* Built using [pygame](https://www.pygame.org/) and [python-chess](https://python-chess.readthedocs.io/en/latest/)
-* Chess piece images can be sourced from open resources like [Wikipedia Chess Piece Set](https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces)
-
----
