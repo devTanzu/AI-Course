@@ -75,14 +75,14 @@ Key properties:
 |-- README.md
 |-- screenshots/
     |-- gameplay1.png
-    |-- gameplay2.png
+    
 ```
 
 To add screenshots in your `README.md`:
 
 ```markdown
-![Gameplay 1](screenshots/gameplay1.png)
-![Gameplay 2](screenshots/gameplay2.png)
+![Gameplay 1](./screenshots/Gameplay.png)
+
 ```
 
 ---
