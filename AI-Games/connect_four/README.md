@@ -55,9 +55,9 @@ connect_four/
 ├── A_connect_four.py
 ├── README.md
 └── screenshots/
-├── game_start.png
-├── mid_game.png
-└── win_or_draw.png
+├── starting.png
+├── after_game_over.png
+└── winini.png
 
 scss
 Copy
@@ -66,9 +66,10 @@ Edit
 **Embed the images in your README**
 
 ```markdown
-![Game start](./Screenshots/after%20game%20over.png)
-![Mid‑game](./Screenshots/starting.png)
-![Win or draw](./Screenshots/wining.png)
+![starting](./A_connect_four.py/Screensgots/starting.png)
+![after_game_over](./Screenshots/after_game_over.png)
+![winning](./Screenshots/winning.png)
+
 
 🚀 Features
 
