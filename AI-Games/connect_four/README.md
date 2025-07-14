@@ -85,9 +85,9 @@ connect_four/
 
 Screenshots
 
-| Start of Game                        | Winning State                         | After Game Over                                 |
-| ------------------------------------ | ------------------------------------- | ----------------------------------------------- |
-| ![Start](./screenshots/starting.png) | ![Winning](./screenshots/wining.png) | ![Game Over](./screenshots/after%20game%20over.png) |
+ ![Start](./screenshots/starting.png) 
+ ![Winning](./screenshots/wining.png) 
+ ![Game Over](./screenshots/after%20game%20over.png) 
 
 ---
 
