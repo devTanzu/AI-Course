@@ -60,7 +60,6 @@ connect_four/
 ├── after_game_over.png
 └── winini.png
 
----
 > ## 🖼️ Screenshots
 
 
