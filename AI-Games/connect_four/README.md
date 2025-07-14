@@ -1,111 +1,111 @@
-# 🎯 Connect Four: User vs User (Terminal Edition)
+🎯 Connect Four: User vs User (Terminal Edition)
 
-A classic **Connect Four** game written in Python for two human players to enjoy right in the terminal.  
-Drop discs into a 7‑column, 6‑row grid, and be the first to align four of your own discs horizontally, vertically, or diagonally!
+This is a classic **Connect Four** game built with Python and designed to be played in the terminal. Two players take turns dropping discs into a vertical grid. The first to align four discs horizontally, vertically, or diagonally wins!
+
+🧠 Game Logic Behind the Scenes
+
+- The game board is a 2D list (6 rows × 7 columns).
+- On each turn, the player selects a column to drop their disc.
+- The program checks for:
+  - Four in a row (in all directions)
+  - Full board (for draw detection)
+- The board is updated and printed after each move.
+
+---
+> 🧩 ## 📸 Screenshots
+
+![screenshots](./screenshots/starting.png)
+
+![screenshots](./screenshots/wining.png)
+
+![screenshots](./screenshots/after%20game%20over.png)
 
 ---
 
-## Table of Contents
-1. [Gameplay Overview](#gameplay-overview)  
-2. [Features](#features)  
-3. [Requirements](#requirements)  
-4. [Installation](#installation)  
-5. [Running the Game](#running-the-game)  
-6. [How to Play](#how-to-play)  
-7. [Project Structure](#project-structure)  
-8. [Screenshots](#screenshots)  
-9. [Future Improvements](#future-improvements)  
-10. [License](#license)  
-11. [Credits](#credits)  
+🛠️ Requirements
 
----
-
-## Gameplay Overview
-- **Board:** 2‑D list representing a 6 × 7 grid.  
-- **Turns:** Players alternate selecting a column (0 – 6).  
-- **Checks performed after each move:**  
-  1. Four‑in‑a‑row, in any direction.  
-  2. Full board (declares a draw).  
-- **Feedback:** The board re‑renders in the terminal after every move and announces wins or draws.
-
----
-
-## Features
-- Interactive terminal interface with clear prompts.  
-- Real‑time board rendering using ASCII characters.  
-- Robust win & draw detection.  
-- Clean, well‑commented source code—great for learning 2‑D array manipulation and basic game logic.
-
----
-
-## Requirements
-| Software | Version |
-|----------|---------|
-| Python   | 3.7 or newer |
-
-No external libraries needed—everything is standard Python.
-
----
-
-## Installation
-Clone the repository (or download the ZIP):
+You only need:
 
 ```bash
-git clone https://github.com/your‑username/connect_four.git
+Python 3.7+
+No additional libraries or dependencies are required.
+
+▶️ How to Run the Game
+
+Clone or download this repository to your local machine.
+
+Navigate to the game folder:
+
+bash
+Copy
+Edit
 cd connect_four
+Run the game using:
 
-Running the Game
-,,,
+bash
+Copy
+Edit
 python A_connect_four.py
-,,,
+🎮 How to Play
 
-You’ll see the empty board and a prompt for Player 1’s first move
+Two players (Player 1 and Player 2) take alternate turns.
 
-How to Play
+On your turn, input the column number (0–6) where you want to drop your disc.
 
-1.Select a column (0 – 6) when prompted.
+The program will show the updated board after every move.
 
-2.The disc drops into the lowest empty row in that column.
+A message will display if a player wins or if the board is full (draw).
 
-3.Players alternate turns until someone gets four in a row or the board is full.
 
-4.The game prints a victory message (or draw) and exits
+
 ---
-Project Structure
+
+**Suggested file structure**
 
 connect_four/
-├── A_connect_four.py       # Game source code
-├── README.md               # This file
-└── screenshots/            # Images for the README
-    ├── starting.png
-    ├── winning.png
-    └── after_game_over.png
+├── A_connect_four.py
+├── README.md
+└── screenshots/
+├── starting.png
+├── after_game_over.png
+└── winini.png
+
+
+
+🚀 Features
+
+Interactive terminal-based interface
+
+Real-time board rendering
+
+Win and draw detection
+
+Simple, clean code for learning logic and 2D arrays
+
+❓ Future Improvements (Suggestions)
+
+Add a single-player mode (with a basic AI)
+
+GUI version using tkinter or pygame
+
+Highlight winning sequence
+
+Add input validation for better user experience
+
+📜 License
+
+This project is open-source and free to use under the MIT License.
+
+💡 Credits
+
+Built using Python
+
+Game logic inspired by the original Connect Four game by Howard Wexler and Ned Strongin
+
+yaml
+Copy
+Edit
 
 ---
 
-Screenshots
 
- ![Start](./screenshots/starting.png) 
- ![Winning](./screenshots/wining.png) 
- ![Game Over](./screenshots/after%20game%20over.png) 
-
----
-
-Future Improvements
-Single‑player mode with a simple AI opponent.
-
-GUI version (e.g., tkinter or pygame).
-
-Highlight winning sequence on the board.
-
-Enhanced input validation and error messages.
-
-License
-This project is licensed under the MIT License—see LICENSE for details.
-
-Credits
-Built with Python 3.
-
-Game concept inspired by the original Connect Four (Howard Wexler & Ned Strongin).
-
----
