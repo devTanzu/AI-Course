@@ -65,7 +65,12 @@ Key properties:
 
 ## 🖼️ Screenshots
 
-> 🧩 *You can take screenshots of the game running and place them in your project folder.*
+> 🧩## 📸 Screenshots
+
+### **Start game**
+![screenshots](./screenshots/Gameplay.png)
+
+---
 
 **Suggested file structure:**
 
@@ -78,15 +83,6 @@ Key properties:
     
 ```
 
-To add screenshots in your `README.md`:
-
-```markdown
-![Gameplay](./screenshots/Gameplay.png)
-
-
-```
-
----
 
 ## 💡 Tips
 

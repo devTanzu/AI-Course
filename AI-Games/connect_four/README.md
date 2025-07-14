@@ -66,8 +66,8 @@ Edit
 **Embed the images in your README**
 
 ```markdown
-![starting](./A_connect_four.py/Screensgots/starting.png)
-![after_game_over](./Screenshots/after_game_over.png)
+![starting](./Screenshots/starting.png)
+![after_game_over](./Screenshots/after%20game%20over.png)
 ![winning](./Screenshots/winning.png)
 
 
