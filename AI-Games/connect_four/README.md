@@ -49,11 +49,11 @@ A message will display if a player wins or if the board is full (draw).
 
 > 🧩 ## 📸 Screenshots
 
-![screenshots](./Screenshots/starting.png)
+![screenshots](./screenshots/starting.png)
 
-![screenshots](./Screenshots/after%20game%20over.png)
+![screenshots](./screenshots/wining.png)
 
-![screenshots](./Screenshots/wining.png)
+![screenshots](./screenshots/after%20game%20over.png)
 
 ---
 
