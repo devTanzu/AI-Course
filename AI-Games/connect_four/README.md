@@ -45,9 +45,17 @@ The program will show the updated board after every move.
 
 A message will display if a player wins or if the board is full (draw).
 
-## 🖼️ Screenshots
 
-> 🧩 *Take a few screenshots while the game is running and save them in the `screenshots/` folder inside your project.*
+
+> 🧩 ## 📸 Screenshots
+
+![screenshots](./Screenshots/starting.png)
+
+![screenshots](./Screenshots/after%20game%20over.png)
+
+![screenshots](./Screenshots/wining.png)
+
+---
 
 **Suggested file structure**
 
@@ -59,16 +67,6 @@ connect_four/
 ├── after_game_over.png
 └── winini.png
 
-scss
-Copy
-Edit
-
-**Embed the images in your README**
-
-```markdown
-![starting](./Screenshots/starting.png)
-![after_game_over](./Screenshots/after%20game%20over.png)
-![winning](./Screenshots/winning.png)
 
 
 🚀 Features

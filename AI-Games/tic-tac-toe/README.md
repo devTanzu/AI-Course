@@ -65,8 +65,6 @@ Key properties:
 
 ## 🖼️ Screenshots
 
-> 🧩## 📸 Screenshots
-
 ### **Start game**
 ![screenshots](./screenshots/Gameplay.png)
 

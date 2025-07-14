@@ -89,17 +89,19 @@ AI-Games/
 │   ├── chess_game.py          
 │   └── README.md              
 
-🖼️ Screenshots
-📸 Save screenshots of the game during play and place them in the screenshots/ directory.
+## 📸 Screenshots
 
-To embed images in your README:
+### **Start game**
+![screenshots](./screenshots/start_game.png)
 
-markdown
-Copy
-Edit
-![start_game](./screenshots/start_game.png)
-![piece_selected](./screenshots/piece_selected.png)
-![checkmate_white](./screenshots/checkmate_white.png)
+### **Ingame Play**
+![screenshots](./screenshots/piece_selected.png)
+
+### **Checkmate**
+![screenshots](./screenshots/checkmate_white.png)
+
+---
+
 
 🚀 Key Features
 Interactive 8x8 chessboard using Pygame
