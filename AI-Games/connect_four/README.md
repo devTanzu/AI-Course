@@ -11,23 +11,12 @@ This is a classic **Connect Four** game built with Python and designed to be pla
   - Full board (for draw detection)
 - The board is updated and printed after each move.
 
----
-> ## 🖼️ Screenshots
 
-### **Start game**
-![screenshots](./screenshots/starting.png)
-
-![screenshots](./screenshots/wining.png)
-
-![screenshots](./screenshots/after%20game%20over.png)
-
----
 
 🛠️ Requirements
 
 You only need:
 
-```bash
 Python 3.7+
 No additional libraries or dependencies are required.
 
@@ -71,6 +60,18 @@ connect_four/
 ├── after_game_over.png
 └── winini.png
 
+---
+> ## 🖼️ Screenshots
+
+
+![screenshots](./screenshots/starting.png)
+
+![screenshots](./screenshots/wining.png)
+
+![screenshots](./screenshots/after%20game%20over.png)
+
+---
+
 
 
 🚀 Features
@@ -102,6 +103,7 @@ This project is open-source and free to use under the MIT License.
 Built using Python
 
 Game logic inspired by the original Connect Four game by Howard Wexler and Ned Strongin
+
 
 ---
 
