@@ -11,6 +11,17 @@ This is a classic **Connect Four** game built with Python and designed to be pla
   - Full board (for draw detection)
 - The board is updated and printed after each move.
 
+---
+> 🧩 ## 📸 Screenshots
+
+![screenshots](./screenshots/starting.png)
+
+![screenshots](./screenshots/wining.png)
+
+![screenshots](./screenshots/after%20game%20over.png)
+
+---
+
 🛠️ Requirements
 
 You only need:
@@ -46,14 +57,6 @@ The program will show the updated board after every move.
 A message will display if a player wins or if the board is full (draw).
 
 
-
-> 🧩 ## 📸 Screenshots
-
-![screenshots](./screenshots/starting.png)
-
-![screenshots](./screenshots/wining.png)
-
-![screenshots](./screenshots/after%20game%20over.png)
 
 ---
 
