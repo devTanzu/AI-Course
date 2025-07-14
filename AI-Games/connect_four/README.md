@@ -12,8 +12,9 @@ This is a classic **Connect Four** game built with Python and designed to be pla
 - The board is updated and printed after each move.
 
 ---
-> 🧩 ## 📸 Screenshots
+> ## 🖼️ Screenshots
 
+### **Start game**
 ![screenshots](./screenshots/starting.png)
 
 ![screenshots](./screenshots/wining.png)
@@ -101,10 +102,6 @@ This project is open-source and free to use under the MIT License.
 Built using Python
 
 Game logic inspired by the original Connect Four game by Howard Wexler and Ned Strongin
-
-yaml
-Copy
-Edit
 
 ---
 
